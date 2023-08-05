@@ -10,16 +10,16 @@ const TOKEN = process.env.CONTENTFUL_TOKEN;
 const SPACE = process.env.CONTENTFUL_SPACE;
 const URI = `https://graphql.contentful.com/content/v1/spaces/${SPACE}`;
 const defaultOptions: DefaultOptions = {
-    watchQuery: {
-      fetchPolicy: "no-cache",
-      errorPolicy: "ignore",
-    },
-    query: {
-      fetchPolicy: "no-cache",
-      errorPolicy: "all",
-    },
-  };
-  
+  watchQuery: {
+    fetchPolicy: "no-cache",
+    errorPolicy: "ignore",
+  },
+  query: {
+    fetchPolicy: "no-cache",
+    errorPolicy: "all",
+  },
+};
+
 const http = new HttpLink({
   uri: URI,
   headers: {
@@ -35,7 +35,7 @@ const cache = new InMemoryCache({ resultCaching: false });
 const apolloClient = new ApolloClient({
   link,
   cache,
-  defaultOptions
+  defaultOptions,
 });
 
 export default apolloClient;
