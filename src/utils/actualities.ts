@@ -4,9 +4,9 @@ import apolloClient from "./apollo";
 interface Collection<T> {
   items: T[];
 }
-interface Actuality {
+export interface Actuality {
   title: string;
-  date: Date | null;
+  date: string | null;
   description: {
     json: object;
   } | null;

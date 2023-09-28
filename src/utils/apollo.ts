@@ -6,8 +6,8 @@ import {
   DefaultOptions,
 } from "@apollo/client";
 
-const TOKEN = process.env.CONTENTFUL_TOKEN;
-const SPACE = process.env.CONTENTFUL_SPACE;
+const TOKEN = process.env.NEXT_PUBLIC_CONTENTFUL_TOKEN;
+const SPACE = process.env.NEXT_PUBLIC_CONTENTFUL_SPACE;
 const URI = `https://graphql.contentful.com/content/v1/spaces/${SPACE}`;
 const defaultOptions: DefaultOptions = {
   watchQuery: {
